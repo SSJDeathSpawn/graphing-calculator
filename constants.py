@@ -1,0 +1,14 @@
+import enum
+
+GL_VERSION = (3,3)
+WINDOW_RESOLUTION = (1920, 1080)
+GRAPH_BOUNDS = (1280,720)
+GRAPH_LIMIT = (16, 9)
+CLARITY = 2
+
+class CELL_VALUES(enum.Enum):
+    TOP_LEFT = 0,
+    TOP_RIGHT = 1,
+    BOTTOM_RIGHT = 2,
+    BOTTOM_LEFT = 3,
+    SADDLE = 4
