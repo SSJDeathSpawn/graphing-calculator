@@ -15,15 +15,12 @@ class CustomWindow(mglw.WindowConfig):
         super().__init__(**kwargs)
         # Do initialization here
 
-        self.points = np.array([
-            [0.0, -0.5],
-            [0.5, 0.5],
-            [-0.5, 0.5]
-        ])
         self.vert = self.load_program(vertex_shader='vertex.glsl', fragment_shader='fragment.glsl')
+
         func = lambda x, y: (x**2 + y**2)**2 - 32*(x**2 - y**2)
         circle_func = lambda x, y: x**2 + y**2 - 4
         sin_func = lambda x,y: y - sin(x)
+        
         self.graph = Graph(self.ctx, self.vert, ['vert', 'colour'], func)
 
     def render(self, time, frametime):

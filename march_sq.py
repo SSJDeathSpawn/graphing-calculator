@@ -31,9 +31,7 @@ class MarchingSquareHelper(object):
     @staticmethod
     def get_lines_from_cell(values: dict[tuple[int, int], float], func: Callable[[float, float], float]) -> list[list[float]]:
         """Returns the approximate ends of the line segments that form the contour."""
-        # def is_interesting(pair: tuple[tuple[ tuple[int, int], tuple[int, int]], tuple[float, float]]):
-        #     return pair[1][0] <= 0 <= pair[1][1] or pair[1][0] >= 0 >= pair[1][1]
-        
+
         line_points = []
         sides: list[int] = MarchingSquareHelper.get_needed_sides(values)
         pairs: dict[tuple[tuple[int, int], tuple[int, int]], tuple[float, float]] = MarchingSquareHelper.get_pair_list(values, sides)

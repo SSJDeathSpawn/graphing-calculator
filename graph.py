@@ -3,7 +3,6 @@ import itertools
 from typing import TYPE_CHECKING, Callable
 import numpy as np
 
-from utils import sign, lerp, invlerp
 from constants import CLARITY, GRAPH_BOUNDS, WINDOW_RESOLUTION, GRAPH_LIMIT, CELL_VALUES
 from march_sq import MarchingSquareHelper
 
